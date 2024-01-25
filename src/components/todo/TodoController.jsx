@@ -4,6 +4,7 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 function TodoController() {
+    /** form 요소 state */
     const [title, setTitle] = useState('');
     const [contents, setContents] = useState('');
     const [todocards, setTodoCards] = useState([
@@ -19,6 +20,7 @@ function TodoController() {
     const [titleError, setTitleError] = useState('');
     const [contentsError, setContentsError] = useState('');
 
+    /** 함수선언 */
     const onChangeTitle = (e) => {
         setTitle(e.target.value);
         if (e.target.value !== '') {
@@ -33,6 +35,7 @@ function TodoController() {
         }
     };
 
+    //제출 form
     const onHandleTodoSubmit = (e) => {
         e.preventDefault();
         if (!title) {
@@ -69,7 +72,6 @@ function TodoController() {
             const delTodoListItem = todocards.filter((item) => item.id !== id);
             setTodoCards(delTodoListItem);
         } else {
-            // 사용자가 취소한 경우의 로직
             return false;
         }
     };
