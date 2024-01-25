@@ -5,30 +5,32 @@ function TodoList({
     doneTodos,
     onClickHandleDelete,
     onClickHandleToggle,
+    randomCardColor,
 }) {
-    const renderTodoItems = (todos) => (
-        <ul>
-            {todos.map((todo) => (
-                <TodoItems
-                    key={todo.id}
-                    todo={todo}
-                    onClickHandleDelete={onClickHandleDelete}
-                    onClickHandleToggle={onClickHandleToggle}
-                />
-            ))}
-        </ul>
+    const renderTodoItems = (todos, title) => (
+        <section>
+            <h2>{title}</h2>
+            <ul>
+                {todos.map((todo) => (
+                    <TodoItems
+                        key={todo.id}
+                        todo={todo}
+                        onClickHandleDelete={onClickHandleDelete}
+                        onClickHandleToggle={onClickHandleToggle}
+                        randomCardColor={randomCardColor}
+                        style={{
+                            backgroundColor: todo.color,
+                        }}
+                    />
+                ))}
+            </ul>
+        </section>
     );
 
     return (
         <div>
-            <section>
-                <h2>Working</h2>
-                {renderTodoItems(workingTodos)}
-            </section>
-            <section>
-                <h2>Done</h2>
-                {renderTodoItems(doneTodos)}
-            </section>
+            {renderTodoItems(workingTodos, 'Working')}
+            {renderTodoItems(doneTodos, 'Done')}
         </div>
     );
 }
