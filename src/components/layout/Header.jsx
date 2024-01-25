@@ -4,7 +4,9 @@ export default function Header() {
     return (
         <header>
             <h1>
-                <a href="/index.html">✨ MY TODO LIST ✨</a>
+                <a href="https://seokachu.github.io/todoList-develop">
+                    ✨ MY TODO LIST ✨
+                </a>
             </h1>
         </header>
     );
