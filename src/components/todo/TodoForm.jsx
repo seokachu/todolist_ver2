@@ -10,15 +10,16 @@ export default function TodoForm({ props }) {
     } = props;
     return (
         <form>
-            <div>
+            <div className="input-form">
                 <p>
                     <input
                         type="text"
                         placeholder="제목을 입력해 주세요."
+                        autoFocus
                         value={title}
                         onChange={onChangeTitle}
                     />
-                    <span>{titleError}</span>
+                    <span className="error">{titleError}</span>
                 </p>
                 <p>
                     <input
@@ -27,7 +28,7 @@ export default function TodoForm({ props }) {
                         value={contents}
                         onChange={onChangeContents}
                     />
-                    <span>{contentsError}</span>
+                    <span className="error">{contentsError}</span>
                 </p>
                 <button type="submit" onClick={onHandleTodoSubmit}>
                     등록하기

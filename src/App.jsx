@@ -1,4 +1,4 @@
-import './App.css';
+import './components/styles/style.css';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import TodoController from './components/todo/TodoController';

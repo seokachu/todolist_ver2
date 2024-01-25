@@ -10,7 +10,7 @@ function TodoList({
     const renderTodoItems = (todos, title) => (
         <section>
             <h2>{title}</h2>
-            <ul>
+            <ul className="todo-list">
                 {todos.map((todo) => (
                     <TodoItems
                         key={todo.id}
@@ -28,10 +28,10 @@ function TodoList({
     );
 
     return (
-        <div>
-            {renderTodoItems(workingTodos, 'Working')}
-            {renderTodoItems(doneTodos, 'Done')}
-        </div>
+        <>
+            {renderTodoItems(workingTodos, '✍️ WORKING')}
+            {renderTodoItems(doneTodos, '🌟 DONE')}
+        </>
     );
 }
 

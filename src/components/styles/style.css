@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import './reset.css';
+
+/*-------- COMMON ---------*/
+* {
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+button {
+    border: 1px solid #999;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 0 108px;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid #999;
+    text-align: left;
+    padding: 0 20px;
+}
+
+input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+h1,
+h2 {
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 500;
+}
+
+.error {
+    color: red;
+}
+
+/*-------- HEADER ---------*/
+header {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 30px;
+}
+
+/*-------- MAIN ---------*/
+.input-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: baseline;
+}
+
+.input-form>p:nth-of-type(2) input[type="text"] {
+    width: 300px;
+}
+
+.input-form>button {
+    padding: 0 15px;
+    height: 45px;
+}
+
+.input-form>button:hover {
+    background-color: #eee;
+}
+
+.input-form p span {
+    display: block;
+    text-align: left;
+    padding: 3px 0 3px 23px;
+    font-size: 14px;
+}
+
+h2 {
+    position: relative;
+    padding: 30px 0;
+    width: 800px;
+    margin: 0 auto;
+}
+
+h2:before,
+h2:after {
+    background-color: #ccc;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 53%;
+    width: 250px;
+}
+
+h2:before {
+    left: 0;
+}
+
+h2:after {
+    right: 0;
+}
+
+.todo-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: baseline;
+    overflow: hidden;
+    padding: 0 0 40px;
+}
+
+.todo-list .todo-card-lists {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 253px;
+    border: 1px solid #eee;
+}
+
+.todo-list .todo-card-lists h3 {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.todo-list .todo-card-lists p {
+    margin: 20px 0;
+    word-break: break-all;
+    text-align: left;
+}
+
+.todo-list .todo-card-lists article>div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-list .todo-card-lists article>div>button {
+    color: #777;
+    border: 1px solid #999;
+    padding: 1px 7px;
+    font-size: 14px;
+}
+
+.todo-list .todo-card-lists article>div>button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/*-------- FOOTER ---------*/
+footer {
+    background-color: #eee;
+    padding: 40px 0;
+}
+
+address {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+address>p {
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link p>a>* {
+    font-size: 32px;
+}
