@@ -6,33 +6,28 @@ function TodoList({
     onClickHandleDelete,
     onClickHandleToggle,
 }) {
+    const renderTodoItems = (todos) => (
+        <ul>
+            {todos.map((todo) => (
+                <TodoItems
+                    key={todo.id}
+                    todo={todo}
+                    onClickHandleDelete={onClickHandleDelete}
+                    onClickHandleToggle={onClickHandleToggle}
+                />
+            ))}
+        </ul>
+    );
+
     return (
         <div>
             <section>
                 <h2>Working</h2>
-                <ul>
-                    {workingTodos.map((todo) => (
-                        <TodoItems
-                            key={todo.id}
-                            todo={todo}
-                            onClickHandleDelete={onClickHandleDelete}
-                            onClickHandleToggle={onClickHandleToggle}
-                        />
-                    ))}
-                </ul>
+                {renderTodoItems(workingTodos)}
             </section>
             <section>
                 <h2>Done</h2>
-                <ul>
-                    {doneTodos.map((todo) => (
-                        <TodoItems
-                            key={todo.id}
-                            todo={todo}
-                            onClickHandleDelete={onClickHandleDelete}
-                            onClickHandleToggle={onClickHandleToggle}
-                        />
-                    ))}
-                </ul>
+                {renderTodoItems(doneTodos)}
             </section>
         </div>
     );
